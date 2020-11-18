@@ -55,10 +55,10 @@
     
     <section>
       <h2>Score Board</h2>
-      <div>X: 0</div>
-      <div>O: 0</div>
-      <button>X Wins!</button>
-      <button>O Wins!</button>
+      <div>X: <span id="x-score">0</span></div>
+      <div>O: <span id="o-score">0</span></div>
+      <button class="winner-button" data-winner="x">X Wins!</button>
+      <button class="winner-button" data-winner="o">O Wins!</button>
     </section>
     <div>
       <p>(X or O)'s turn</p>
@@ -125,5 +125,16 @@
         </tr>
       </table>
     </div>
+    
+    <script>
+      (function() {
+        var winnerButtons = document.querySelectorAll('.winner-button');
+        winnerButtons.forEach(function (button) {
+          button.addEventListener('click', function () {
+            alert('click');
+          });
+        });
+      }());
+    </script>
   </body>
 </html>

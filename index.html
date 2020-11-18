@@ -8,6 +8,7 @@
       body {
         max-width: 900px;
         margin: auto;
+        padding: 10vw;
       }
       
       h1 {
@@ -19,6 +20,10 @@
       section {
         background-color: pink;
         border: ridge;
+      }
+      
+      table {
+        width: 100%;
       }
       
       td {
@@ -33,6 +38,13 @@
       
       td:nth-child(3) {
         border-right: 0;
+      }
+      
+      label {
+        display: block;
+        height: 0;
+        padding-bottom: 100%;
+        width: 100%;
       }
       
     </style>
@@ -51,9 +63,24 @@
       <p>(X or O)'s turn</p>
       <table>
         <tr>
-          <td>X or O</td>
-          <td>X or O</td>
-          <td>X or O</td>
+          <td>
+            <label>
+              <input type="checkbox" />
+              X or O
+            </label>
+          </td>
+          <td>
+            <label>
+              <input type="checkbox" />
+              X or O
+            </label>
+          </td>
+          <td>
+            <label>
+              <input type="checkbox" />
+              X or O
+            </label>
+          </td>
         </tr>
         <tr>
           <td>X or O</td>

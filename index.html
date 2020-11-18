@@ -131,7 +131,8 @@
         var winnerButtons = document.querySelectorAll('.winner-button');
         winnerButtons.forEach(function (button) {
           button.addEventListener('click', function () {
-            alert('click');
+            var winner = button.getAttribute('data-winner');
+            alert('click: ' + winner);
           });
         });
       }());

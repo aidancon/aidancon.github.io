@@ -3,52 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>tictactoe</title>
-    
-    <style>
-      body {
-        max-width: 900px;
-        margin: auto;
-        padding: 10vw;
-      }
-      
-      h1 {
-        font-size: 100px;
-        font-weight: normal;
-        system-ui: system-ui;
-      }
-      
-      section {
-        background-color: pink;
-        border: ridge;
-      }
-      
-      table {
-        border-spacing: 0;
-        width: 100%;
-      }
-      
-      td {
-        border: 0;
-        border-right: 1px solid lightskyblue;
-        border-bottom: 1px solid lightskyblue;
-      }
-      
-      tr:nth-child(3) td {
-        border-bottom: 0;
-      }
-      
-      td:nth-child(3) {
-        border-right: 0;
-      }
-      
-      label {
-        display: block;
-        height: 0;
-        padding-bottom: 100%;
-        width: 100%;
-      }
-      
-    </style>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
   </head>
   <body>
     <h1>Aidan's Tic-Tac-Toe</h1>
@@ -126,26 +81,6 @@
       </table>
     </div>
     
-    <script>
-      (function() {
-        var winnerButtons = document.querySelectorAll('.winner-button');
-        var scores = {
-          x: 0,
-          o: 0
-        };
-        
-        winnerButtons.forEach(function (button) {
-          button.addEventListener('click', function () {
-            var winner = button.getAttribute('data-winner');
-            var score = document.querySelector('#' + winner + '-score');
-            
-            scores[winner] = scores[winner] + 1;
-            score.innerText = scores[winner];
-            
-            // TO DO: Reset the playing board!
-          });
-        });
-      }());
-    </script>
+    <script src="/script.js"></script>
   </body>
 </html>
